@@ -12,7 +12,7 @@ import com.example.project.city.model.City;
 @Data
 public class Partner {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
     @Column(nullable = false)

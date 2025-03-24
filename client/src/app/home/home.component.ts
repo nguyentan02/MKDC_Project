@@ -12,7 +12,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, MatTableModule, MatSortModule, MatPaginatorModule,RouterOutlet, NgIf],
+  imports: [CommonModule, MatTableModule, MatSortModule, MatPaginatorModule],
   template: `
 
     <h1>Danh sách đối tác</h1>

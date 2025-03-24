@@ -42,4 +42,9 @@ public class City {
 
     @Column(nullable = false)
     private boolean inUsed;
+
+    public void setInUsed(char c) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setInUsed'");
+    }
 }

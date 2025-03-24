@@ -17,9 +17,9 @@ function initializeOAuth(oauthService: OAuthService, router: Router): () => Prom
     oauthService.configure(authConfig);
     return oauthService.loadDiscoveryDocumentAndTryLogin().then(() => {
       if (oauthService.hasValidAccessToken()) {
-        router.navigateByUrl('/home'); // Điều hướng sau khi đăng nhập
+        router.navigateByUrl('/home'); 
       } else {
-        router.navigateByUrl('/login'); // Điều hướng đến trang đăng nhập nếu chưa đăng nhập
+        router.navigateByUrl('/login'); 
       }
     });
   };

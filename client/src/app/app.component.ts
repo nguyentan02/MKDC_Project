@@ -19,7 +19,7 @@ import { NgIf } from '@angular/common';
         <router-outlet></router-outlet> 
       </section>
     </main>
-  `,
+  `, 
 })
 export class AppComponent implements OnInit {
   isAuthorized = false;
