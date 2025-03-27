@@ -18,14 +18,14 @@ public class Partner {
     @Column(nullable = false)
     private String code;
 
-    @Column(name = "name", columnDefinition = "NVARCHAR(1023)")
+    @Column(name = "name", columnDefinition = "NVARCHAR(255)")
     private String name;
 
-    @Column(nullable = false)
+    @Column(nullable = false,columnDefinition = "NVARCHAR(255)")
     private String address;
 
-    @Column(nullable = false)
-    private String phone_number_1;
+    @Column(name = "phone_number_1", nullable = false)
+    private String phoneNumber1;
 
     private String phone_number_2;
     private String fax_Number;
@@ -33,8 +33,8 @@ public class Partner {
     @Column(nullable = false)
     private String owner_Name;
 
-    @Column(nullable = false)
-    private String tax_Number;
+    @Column(name = "tax_Number", nullable = false)
+    private String taxNumber;
 
     @ManyToOne
     @JoinColumn(name = "city_id", referencedColumnName = "id")

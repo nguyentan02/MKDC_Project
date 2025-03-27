@@ -13,4 +13,7 @@ export class PartnerService  {
   getPartners(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
+  importExcel(formData: FormData): Observable<any> {
+    return this.http.post(`${this.apiUrl}/import`, formData);
+  }
 }

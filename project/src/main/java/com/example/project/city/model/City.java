@@ -24,7 +24,7 @@ public class City {
 
     @Column(nullable = false)
     private String code;
-
+    @Column(name = "name", columnDefinition = "NVARCHAR(255)")
     private String name;
 
     @ManyToOne

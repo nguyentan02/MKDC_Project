@@ -6,7 +6,7 @@ import { routes } from './app.routes';
 export const authConfig: AuthConfig = {
   issuer: 'https://localhost:9444/oauth2/token',
   redirectUri: 'http://localhost:4200/',
-  clientId: 'bnfUjFjilytNcx83AnvMDk45WSka',
+  clientId: 'Vo60nYueaTs08vIXITU5wz0fvsga',
   responseType: 'code',
   scope: 'openid profile email internal_login',
   strictDiscoveryDocumentValidation: false,

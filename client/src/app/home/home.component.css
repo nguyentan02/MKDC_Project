@@ -1,0 +1,16 @@
+.error-snackbar {
+    background-color: #e40d02 !important; /* Màu xanh lá */
+    color: rgb(251, 251, 251) !important;
+    font-weight: bold;
+  }
+  .button-container {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px; 
+    margin-bottom: 10px;
+  }
+  
+  .btn-import {
+    background-color: #1976d2;
+    color: white;
+  }
