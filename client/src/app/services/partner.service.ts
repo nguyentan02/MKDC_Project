@@ -16,4 +16,7 @@ export class PartnerService  {
   importExcel(formData: FormData): Observable<any> {
     return this.http.post(`${this.apiUrl}/import`, formData);
   }
+  exportExcel(): Observable<Blob> {
+    return this.http.get(`${this.apiUrl}/export`, { responseType: 'blob' });
+  }
 }

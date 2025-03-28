@@ -30,7 +30,8 @@ public class Partner {
     private String phone_number_2;
     private String fax_Number;
 
-    @Column(nullable = false)
+    
+    @Column(name = "owner_Name", columnDefinition = "NVARCHAR(255)",nullable =false)
     private String owner_Name;
 
     @Column(name = "tax_Number", nullable = false)

@@ -19,9 +19,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 <section>
   <div class="button-container">
-   <input type="file" accept=".xlsx, .xls"  />
     <input type="file" (change)="onFileSelected($event)" accept=".xlsx, .xls" hidden  #fileInput />
-    <button class="btn-import" mat-raised-button color="primary" (click)="fileInput.click()">Import File Excel</button>
+    <button class="btn-import" mat-raised-button color="primary" (click)="fileInput.click()">Nhập File Excel</button>
+    <button class="btn-export" mat-raised-button color="primary" (click)="downloadFile()">Xuất File Excel</button>
 
   </div>
     <h1>Danh sách đối tác</h1>
@@ -135,5 +135,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
         }
       });
     }
+  }
+  downloadFile() {
+    this.partnerService.exportExcel().subscribe(
+      (response) => {
+        const blob = new Blob([response], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'partners.xlsx';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      },
+      error => console.error('Lỗi tải xuống:', error)
+    );
   }
 }
